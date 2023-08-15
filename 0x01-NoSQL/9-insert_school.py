@@ -1,7 +1,16 @@
 #!/usr/bin/env python3
-"""MongoDB Operations with python using pymongo """
+
+"""
+    Function that gets inserts a document in collection
+"""
 
 
 def insert_school(mongo_collection, **kwargs):
-    """ inserts ne documents in collection """
-    return db.mongo_collection.insert_one(kwargs).inserted_id
+    """
+    inserting a document into school
+
+    Args:
+        mongo_collection (_type_): will add data
+        based on args
+    """
+    return mongo_collection.insert_one(kwargs).inserted_id
