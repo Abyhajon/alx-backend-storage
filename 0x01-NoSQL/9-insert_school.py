@@ -13,4 +13,6 @@ def insert_school(mongo_collection, **kwargs):
         mongo_collection (_type_): will add data
         based on args
     """
-    return mongo_collection.insert_one(kwargs).inserted_id
+
+    inserted_id = db.mongo_collection.insert_one(kwargs).inserted_id
+    return inserted_id
