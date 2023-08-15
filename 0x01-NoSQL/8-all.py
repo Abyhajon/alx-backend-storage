@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-""" MongoDB Operations with python """
+
+"""
+    Function that gets all documents
+"""
 
 
 def list_all(mongo_collection):
-    """ lists documents in a collection """
-    documents = db.mongo_collection.find()
-
-    if documents.count() == 0:
-        return []
-
-    return documents
+    """lists all documents"""
+    return mongo_collection.find()
