@@ -4,4 +4,4 @@
 
 def insert_school(mongo_collection, **kwargs):
     """ inserts ne documents in collection """
-    return db.mongo_collection.insert(kwargs)
+    return db.mongo_collection.insert_one(kwargs).inserted_id
